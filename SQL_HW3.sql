@@ -123,6 +123,7 @@ SELECT *
    FROM customers
    WHERE rating > 100 AND city != "Rome";
 
+
 -- Часть 2 Используемы таблицы: staff
 
 -- Таблица staff
@@ -164,7 +165,7 @@ SELECT *
 -- сортировка по зарплате всей таблицы по убыванию
 SELECT *
    FROM staff
-   ORDER BY salary DESC;
+ORDER BY salary DESC;
    
 
 /* 2.2. Отсортируйте по возрастанию поле “Зарплата” и выведите 5 строк с наибольшей 
@@ -183,6 +184,6 @@ ORDER BY salary;
 превышает 100000 */
 
 SELECT post, SUM(salary) AS sumsalary
-FROM staff
+   FROM staff
 GROUP BY post
 HAVING sumsalary > 100000;
